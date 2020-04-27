@@ -34,7 +34,7 @@ class PriceHistory:
         '''
         takes in a csv file name where the first line contains column names and 
         all subsequent lines are data points. returns a dictionary in which the 
-        keys are the lowercase column names and the values are lists containing 
+        keys are the lowercase column names and the values are lists containing
         the corresponding column's data.
         '''
         # record the ticker symbol and the label
@@ -410,6 +410,7 @@ def plot_confusion_matrix(cm, classes,
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
     plt.tight_layout()
+#-----------------------------------------------------------------------------#
 
 # [user input] specify which ticker symbols to process and their names
 tickers_to_process = [('^GSPC',     'S&P 500'),
