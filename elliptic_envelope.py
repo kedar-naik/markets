@@ -315,8 +315,8 @@ def use_ellipse(points, ellipse_info, visualize_process=False, verbose=False,
             # plot the points
             plot_points_and_ellipse(to_plot.T, ellipse_info, 
                                     suffix='outlierness process - (' + \
-                                    str(to_plot[0][0]) + ', ' + \
-                                    str(to_plot[0][1]) + ')',
+                                    str(np.round(to_plot[0][0], 2)) + ', ' + \
+                                    str(np.round(to_plot[0][1], 2)) + ')',
                                     outlierness_process=True, 
                                     outlierness=outlierness,
                                     plots_directory=plots_directory)
