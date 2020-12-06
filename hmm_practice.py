@@ -13,9 +13,9 @@ from datetime import datetime
 plt.ioff()
 #-----------------------------------------------------------------------------#
 def print_matrix(A, name='A', n_indents=1):
-    '''
+    """
     given a numpy matrix, A, print it to the screen with nice indentation
-    '''
+    """
     # convert input to a numpy array, in case it isn't already
     A = np.array(A)
     # format and print the input, depending on whether it's an array or scalar
