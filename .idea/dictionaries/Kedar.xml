@@ -2,8 +2,17 @@
   <dictionary name="Kedar">
     <words>
       <w>argmin</w>
+      <w>barto</w>
+      <w>cdfs</w>
+      <w>dataset</w>
       <w>dropdown</w>
+      <w>fontsize</w>
+      <w>fsolve</w>
+      <w>kedar</w>
+      <w>mathtt</w>
+      <w>pdfs</w>
       <w>pythonic</w>
+      <w>scipy</w>
     </words>
   </dictionary>
 </component>

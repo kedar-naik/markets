@@ -22,7 +22,7 @@ from sklearn.covariance import EllipticEnvelope
 from distutils.spawn import find_executable
 if find_executable('latex'):
     rc('text', usetex=True)
-#-----------------------------------------------------------------------------#
+# -------------------------------------------------------------------------- #
 def compute_rotation_matrix(theta):
     '''
     returns the 2x2 matrix that rotates points in the x-y plane 
