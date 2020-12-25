@@ -22,7 +22,7 @@ from sklearn.covariance import EllipticEnvelope
 from distutils.spawn import find_executable
 if find_executable('latex'):
     rc('text', usetex=True)
-# -------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------- #
 def compute_rotation_matrix(theta):
     '''
     returns the 2x2 matrix that rotates points in the x-y plane 
@@ -35,7 +35,7 @@ def compute_rotation_matrix(theta):
                                 [-np.sin(theta), np.cos(theta)]])
     # return the matrix
     return rotation_matrix
-#-----------------------------------------------------------------------------#
+#---------------------------------------------------------------------------- #
 def plot_points_and_ellipse(points, ellipse_info, suffix='', 
                             outlierness_process=False, outlierness=np.nan,
                             plots_directory='.'):
@@ -137,7 +137,7 @@ def plot_points_and_ellipse(points, ellipse_info, suffix='',
     # open the saved image, if desired
     if auto_open:
         webbrowser.open(file_name)
-#-----------------------------------------------------------------------------#
+#---------------------------------------------------------------------------- #
 def fit_ellipse(x, y, confidence_interval=0.95, make_plot=True, verbose=True):
     '''
     given lists of abscissas and ordinate values (x and y) and a confidence
@@ -210,7 +210,7 @@ def fit_ellipse(x, y, confidence_interval=0.95, make_plot=True, verbose=True):
         plot_points_and_ellipse(points, ellipse_info)
     # return the dictionary with the ellipse parameters
     return ellipse_info
-#-----------------------------------------------------------------------------#
+#---------------------------------------------------------------------------- #
 def use_ellipse(points, ellipse_info, visualize_process=False, verbose=False,
                 plots_directory='.'):
     '''
@@ -332,7 +332,7 @@ def use_ellipse(points, ellipse_info, visualize_process=False, verbose=False,
         print(results)    
     # return the results dictionary
     return results
-#-----------------------------------------------------------------------------#
+#---------------------------------------------------------------------------- #
 def main():
     '''
     to be run if script is called directly
@@ -408,7 +408,7 @@ def main():
           '\n\t"outlierness" metric, which spans [-1, inf): postive values ' +\
           '\n\timply outliers, negative values imply inliers, and a value ' + \
           '\n\tof -1 corresponds to the center of the ellipse.\n')
-#-----------------------------------------------------------------------------#
+#---------------------------------------------------------------------------- #
 # top-level invoking code
 if __name__ == '__main__':
     main()
