@@ -27,12 +27,12 @@ def write_path(dir_loc, filename=''):
     path_written = Path(os.path.abspath(dir_loc))
     # make sure this location exists
     assert path_written.exists(), '\n\td\'oh! the location pointed to by ' + \
-                                  str(
-                                      path_written) + ' doesn\'t actually exist!\n'
+                                  str(path_written) + \
+                                  ' doesn\'t actually exist!\n'
     # if the location does exist, make sure it's actually a directory
     assert path_written.is_dir(), '\n\td\'oh! the location pointed to by ' + \
-                                  str(
-                                      path_written) + ' isn\'t actually a directory!\n'
+                                  str(path_written) + \
+                                  ' isn\'t actually a directory!\n'
     # if a file name has been provide it, append it to the path
     if filename:
         path_written = path_written.joinpath(filename)
@@ -207,7 +207,9 @@ def random_method(actions_list):
     """
     # make sure the input is either a list or a numpy array
     assert isinstance(actions_list, (list, np.ndarray)), '\n\tactions_list' + \
-                                                         'must be either a list or a numpy array\n'
+                                                         'must be either a ' +\
+                                                         'list or a numpy ' + \
+                                                         'array\n'
     # make sure there is at least one action
     assert len(actions_list) > 1, '\n\tat least one action must be available\n'
     # randomly pick an action
@@ -258,6 +260,8 @@ def select_action(actions_list, action_value_estimates, selection_strategy='',
     valid_strategies = ['random', 'greedy', 'eps-greedy']
     assert selection_strategy in valid_strategies, '\n\tplease select a ' + \
                                                    'valid selection strategy\n'
+    # initialize the selected_action variable to suppress warning
+    selected_action = None
     # deploy the appropriate policy, based on the desired selection strategy
     if selection_strategy == 'random':
         # use the random policy
