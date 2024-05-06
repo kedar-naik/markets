@@ -10,6 +10,11 @@ from matplotlib import pyplot as plt
 import webbrowser
 from sklearn.cluster import KMeans
 
+plt.rcParams.update({
+    "text.usetex": True,
+    "font.family": "Helvetica"
+})
+
 # line parameters
 m = 10
 b_spacing = 600

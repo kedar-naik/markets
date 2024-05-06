@@ -11,10 +11,11 @@ from matplotlib import pyplot as plt
 from matplotlib import rc, cm
 import webbrowser
 from distutils.spawn import find_executable
-
-plt.ioff()
 if find_executable('latex'):
     rc('text', usetex=True)
+
+
+plt.ioff()
 
 
 # --------------------------------------------------------------------------- #
@@ -92,8 +93,8 @@ def main():
     # interval for an uncorrelated 2D dataset
     k = 2  # dimensions of the ellipsoid
     confidence_prob = 0.95  # desired confidence interval
-    ellipse_rhs = fsolve(cdf_root_function, 0.0, args=(k, confidence_prob))[0]
-
+    ellipse_rhs = fsolve(cdf_root_function, np.array(0.0),
+                         args=(k, confidence_prob))[0]
     # print the ellipsoid constant found
     print('\n\t' + 60 * '-')
     print('\n\tRHS constant computation: %d-dimensional ellipsoid' % k)
